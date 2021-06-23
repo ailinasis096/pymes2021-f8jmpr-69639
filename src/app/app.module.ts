@@ -31,12 +31,15 @@ import { DatePickerAdapterISO } from './shared/DatePickerAdapterISO';
 import { DatePickerParserFormatter } from './shared/DatePickerParserFormater';
 import { DatePickerSpanish } from './shared/DatePickerSpanish';
 import { EmpresasComponent } from './components/empresas/empresas.component';
+import { FormsModule } from '@angular/forms';
+import { FormFocusDirective } from './shared/form-focus.directive';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
 
     //Ref Angular Routing
     RouterModule.forRoot(
@@ -80,8 +83,8 @@ import { EmpresasComponent } from './components/empresas/empresas.component';
 
     ClientesInfoComponent,
     VentasComponent,
-    VentasConsultasComponent
-    //FormFocusDirective
+    VentasConsultasComponent,
+    FormFocusDirective
   ],
   entryComponents: [ModalDialogComponent],
   providers: [
